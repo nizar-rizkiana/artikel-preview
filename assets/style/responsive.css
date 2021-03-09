@@ -14,7 +14,7 @@
 	.my-navbar{
 		justify-content: space-between;
 	}
-	.mynavbar-content{
+	/*.mynavbar-content{
 		flex-direction: column;
 		position: absolute;
 		top:60px;
@@ -26,7 +26,7 @@
 		animation-fill-mode: forwards;
 		float: right;
 		overflow-y: auto;
-	}
+	}*/
 	.content .container .col.mb-4{
 		padding: 8px;
 	}
@@ -52,7 +52,7 @@
 	}
 
 	.mynavbar-list{
-		flex-direction: column;
+		/*flex-direction: column;*/
 	}
 	.fa.fa-bars{
 		display: block;
@@ -97,7 +97,7 @@
 		text-decoration:none;
 		display:block;
 		color:#FFF;
-		border-top:1px solid #91F8FE;
+		/*border-top:1px solid #91F8FE;*/
 	}
 
 	.mynavbar-content .logo{
@@ -141,13 +141,15 @@
 }
 
 /*responsive untuk mobile*/
-@media screen and (max-width: 765px){
+@media screen and (max-width: 576px){
 	/*setting global*/
 	p{
 		font-size: 14px;
+		top: 0;
 	}
 	#content{
-		padding: 12px;
+		padding: 0 12px;
+		margin-top: 125px;
 
 	}
 
@@ -156,7 +158,7 @@
 	}
 
 	#content .artikel #judul{
-		font-size: 24px;
+		font-size: 20px;
 		margin-top: 8px;
 	}
 	.slider .gallery {
@@ -164,6 +166,98 @@
 	  /*height: 350px;*/
 	}
 	ul li a{
+		font-size: 14px;
+	}
+
+	.my-navbar{
+		display: block;
+		height: 120px;
+		padding: 0;
+	}
+
+	.navbar-left{
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		padding: 8px;
+		margin-bottom: 4px;
+	}
+	.navbar-left .logo a{
+		font-size: 18px;
+	}
+	.navbar-left .search-input{
+		padding: 0.5rem 1rem;
+		border: none;
+		border-radius: 3px;
+		width: 90%;
 		font-size: 12px;
+	}
+	.navbar-left form{
+		border-radius: 3px;
+		background-color: white;
+		display: flex;
+	}
+	.btn-search i{
+		color: grey;
+	}
+	.btn-search:hover {
+		background-color: #eee;
+	}
+	.navbar-right{
+		display: none;
+	}
+	.mynavbar-content .logo{
+		display: none;
+	}
+
+	.mynavbar-content{
+		/*position: absolute;*/
+		display: flex;
+		justify-content: space-around;
+		overflow-x: scroll;
+	}
+	
+	.mynavbar-list {
+	  display: flex;
+	  list-style-type: none;
+	  padding: 0;
+	  margin: 0;
+	  position: relative;
+	  left: 130px;
+	}
+
+	.mynav-item {
+	  padding: 0;
+	}
+
+	.mynav-link {
+		font-size: 14px;
+	  color: rgba(255, 255, 255, 0.9);
+	  text-decoration: none;
+	}
+	.dropdown {
+	  position: relative;
+	}
+
+	.dropdown-btn {
+	  display: flex !important;
+	  justify-content: space-between;
+	  align-items: center;
+	}
+
+	.dropdown-list {
+	  display: none;
+	  /*position: relative;*/
+	  top: 0;
+	  background-color: #fff;
+	  border-radius: 3px;
+	  width: clamp(160px, 180px, 220px);
+	  padding: 0.5rem 0;
+	  border: 1px solid #ccc;
+	  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+	}
+
+	::-webkit-scrollbar{
+		display: none;
 	}
 }

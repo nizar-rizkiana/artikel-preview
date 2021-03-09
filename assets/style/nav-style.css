@@ -67,6 +67,10 @@ navbar right
 	margin-left: 30px;
 }
 
+.navbar-left{
+	display: none;
+}
+
 .navbar-right .search-input{
 	padding: 0.5rem 1rem;
 	border: none;
