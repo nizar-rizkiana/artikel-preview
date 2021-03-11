@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px){
-	body{
+	/*body{
 		overflow-x: hidden;
-	}
+	}*/
 	/*responsive footer*/
 	.footer-body div.info{
 		width: 80%;
@@ -143,13 +143,17 @@
 /*responsive untuk mobile*/
 @media screen and (max-width: 576px){
 	/*setting global*/
+	body{
+		padding: 0;
+		margin: 0;
+	}
 	p{
 		font-size: 14px;
 		top: 0;
 	}
 	#content{
 		padding: 0 12px;
-		margin-top: 125px;
+		margin-top: 100px;
 
 	}
 
@@ -162,8 +166,7 @@
 		margin-top: 8px;
 	}
 	.slider .gallery {
-	  padding-bottom: 100%;
-	  /*height: 350px;*/
+	 	padding-bottom: 130%;
 	}
 	ul li a{
 		font-size: 14px;
@@ -171,31 +174,65 @@
 
 	.my-navbar{
 		display: block;
-		height: 120px;
+		height: 100px;
 		padding: 0;
 	}
 
 	.navbar-left{
 		display: flex;
 		justify-content: space-between;
-		align-content: center;
-		padding: 8px;
+		align-items: center;
+		padding: 12px 12px 0 12px;
 		margin-bottom: 4px;
 	}
 	.navbar-left .logo a{
 		font-size: 18px;
+		transition: 2s ease all;
 	}
-	.navbar-left .search-input{
-		padding: 0.5rem 1rem;
+	.navbar-left .form .search-input{
+		display: none;
+		
+	}
+	.navbar-left .form .search-input.show{
+		padding: 0.5rem;
 		border: none;
 		border-radius: 3px;
-		width: 90%;
-		font-size: 12px;
+		background-color: transparent;
+		width: 100%;
+		font-size: 10px;
+		transition: 500ms ease all;
+		color: white;
+		margin-right: 8px;
+		display: block;
+	}
+	.navbar-left .form .search-input.show:focus{
+		border: none;
+		color: white;
+		border: 1px solid transparent;
 	}
 	.navbar-left form{
 		border-radius: 3px;
-		background-color: white;
 		display: flex;
+		background-color: transparent;
+		align-items: center;
+		padding: 4px;
+		border: 1px solid #eee;
+		/*height: 80%;
+		width: 100%;*/
+	}
+
+	.navbar-left form.show{
+		transition: 2s ease;
+		
+		opacity: 1;
+	}
+	.mybtn {
+		padding: 0.5rem;
+		border-radius: 3px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background-color: #fff
 	}
 	.btn-search i{
 		color: grey;
@@ -215,6 +252,7 @@
 		display: flex;
 		justify-content: space-around;
 		overflow-x: scroll;
+		align-items: center;
 	}
 	
 	.mynavbar-list {
@@ -223,11 +261,11 @@
 	  padding: 0;
 	  margin: 0;
 	  position: relative;
-	  left: 130px;
+	  left: 100px;
 	}
 
-	.mynav-item {
-	  padding: 0;
+	.mynavbar-content .mynavbar-list .mynav-item {
+	  padding: 8px 12px;
 	}
 
 	.mynav-link {
@@ -247,11 +285,11 @@
 
 	.dropdown-list {
 	  display: none;
-	  /*position: relative;*/
+	  position: relative;
 	  top: 0;
 	  background-color: #fff;
 	  border-radius: 3px;
-	  width: clamp(160px, 180px, 220px);
+	  width: clamp(160px, 200px, 220px);
 	  padding: 0.5rem 0;
 	  border: 1px solid #ccc;
 	  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
