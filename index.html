@@ -30,8 +30,9 @@
 					<span></span>
 				</div>
 				<form action="#" class="form">
-					<input type="text" class="search-input" placeholder="Search ..." />
-					<button class="mybtn btn-search"><i class="fa fa-search"></i></button>
+					<input type="text" class="search-input" placeholder="Search ..." autofocus />
+					<!-- <button class="mybtn btn-search"><i class="fa fa-search"></i></button> -->
+					<i class="fa fa-search text-white" id="muncul" ></i>
 				</form>
 			</div>
 			
@@ -367,6 +368,16 @@
 		});
 		}
 		};
+		// search-input muncul
+		var search = document.querySelector('.search-input');
+		var tombol = document.getElementById('muncul');
+				
+		tombol.addEventListener('click', function(){
+		inputShow();
+		});
+		function inputShow(){
+		search.classList.toggle('show');
+		}
 		</script>
 		<script src="bootstrap/js/jquery.js"></script>
 		<script src="bootstrap/js/popper.js"></script>
