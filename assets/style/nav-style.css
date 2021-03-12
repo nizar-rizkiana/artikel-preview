@@ -59,6 +59,9 @@ navbar
 	text-decoration: none;
 	color: white;
 }
+.my-navbar .baru{
+	display: none;
+}
 /*************************
 
 navbar right
