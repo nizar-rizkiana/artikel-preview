@@ -239,6 +239,7 @@
 	/*form search baru*/
 
 	.my-navbar form.baru{
+		display : block;
 		position: absolute;
 		width: 85%;
 		height: 40px;
