@@ -1,113 +1,28 @@
-@media screen and (max-width: 768px){
-	/*body{
-		overflow-x: hidden;
-	}*/
-	/*responsive footer*/
-	.footer-body div.info{
-		width: 80%;
-		text-align: center;
-		margin:16px auto;
-		/*padding: 0 22px;*/
-		box-sizing: border-box;
+
+/*responsive untuk mobile*/
+@media screen and (max-width: 576px){
+	/*setting global*/
+	body{
+		padding: 0;
+		margin: 0;
 	}
-	/*footer*/
-	.my-navbar{
-		justify-content: space-between;
+	p{
+		font-size: 14px;
+		top: 0;
 	}
-	/*.mynavbar-content{
-		flex-direction: column;
-		position: absolute;
-		top:60px;
-		left:-285px;
-		background-color:#26d0c9;
-		
-		width:50%;
-		animation: slide-out 0.5s ease;
-		animation-fill-mode: forwards;
-		float: right;
-		overflow-y: auto;
-	}*/
-	.content .container .col.mb-4{
-		padding: 8px;
+	a{
+		text-decoration: none;
 	}
-	section#mahasiswa div.img-mahasiswa{
-		display: none;
+	button.btn-search{
+		background-color: transparent;
+		border: none;
+		height: 100%;
 	}
-	section#mahasiswa div.col-sm-12{
-		padding: 16px auto;
-		box-sizing: border-box;
-	}
-	#tag-menu:checked ~ div.mynavbar-content {
-		animation: slide-in 0.5s ease;
-		animation-fill-mode: forwards;
-	}
-	@keyframes slide-in {
-	 from {left: -285px;}
-	 to {left: 0;}
+	button  .fa.fa-search{
+		opacity: 0.7;
 	}
 
-	@keyframes slide-out {
-	 from {left: 0;}
-	 to {left: -285px;}
-	}
-
-	.mynavbar-list{
-		/*flex-direction: column;*/
-	}
-	.fa.fa-bars{
-		display: block;
-	}
-	.menu-bar {
-		display: block;
-		color:#FFF;
-		font-size:25px;
-		cursor:pointer;
-		padding:10px 12px;
-		margin-left:10px;
-		margin-top:5px;
-		margin-bottom:5px;
-	}
-
-	/*.menu-bar:hover {
-		background-color:rgba(0, 0, 0, 0.1);
-		border-radius:50px;
-	}*/
-
-	#tag-menu {
-		display:none;
-		float: right;
-	}
-	div.navbar-right{
-		margin-right: 30px;
-	}
-	
-	.dropdown-btn {
-	    justify-content: flex-start;
-	  }
-
-	.dropdown-list {
-	   	position: relative;
-	 }
-
-	.dropdown .dropdown-list .dropdown {
-	    display: none;
-	}
-	.mynavbar-content ul li{
-		padding:18px;
-		text-decoration:none;
-		display:block;
-		color:#FFF;
-		/*border-top:1px solid #91F8FE;*/
-	}
-
-	.mynavbar-content .logo{
-		font-weight: bold;
-		font-size: 35px;
-		margin-bottom: 20px;
-		padding: 10px 0;
-	}
-
-	/*style responsive jumbotron*/
+/*style responsive jumbotron*/
 	.jumbotron-fluid{
 		height: 30vh;
 	}
@@ -120,11 +35,6 @@
 	  padding-bottom: 80%;
 	  /*height: 350px;*/
 	}
-	/*#slider .flickity-viewport {
-	  position: absolute;
-	  width: 100%;
-	}*/
-
 	/*******	
 
 	responsive artikel
@@ -138,22 +48,11 @@
 	#sidebar{
 		display: none;
 	}
-}
 
-/*responsive untuk mobile*/
-@media screen and (max-width: 576px){
-	/*setting global*/
-	body{
-		padding: 0;
-		margin: 0;
-	}
-	p{
-		font-size: 14px;
-		top: 0;
-	}
+	/*setting content*/
 	#content{
 		padding: 0 12px;
-		margin-top: 100px;
+		margin-top: 80px;
 
 	}
 
@@ -166,6 +65,16 @@
 		margin-top: 8px;
 	}
 
+	figure .figure-caption{
+		font-size: 12px;
+	}
+	p.uploaded{
+		font-size: 12px;
+	}
+
+	span.nama-penulis{
+		font-size: 12px;
+	}
 	/*slider responsive mobile*/
 	/*slider*/
 	.slider .gallery {
@@ -189,57 +98,27 @@
 
 	.my-navbar{
 		display: block;
-		height: 100px;
+		height: 90px;
 		padding: 0;
+		transition: top 0.3s;
 	}
 
 	.navbar-left{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 12px 12px 0 12px;
+		padding: 16px 16px 0 16px;
 		margin-bottom: 4px;
 	}
 	.navbar-left .logo a{
 		font-size: 18px;
 	}
 
-	.navbar-left .form .search-input{
-		width: 0px;
-		height: 0px;
-		border: none;
-		background-color: transparent;
-		font-size: 12px;
-		transition: 1s ease all;
-	}
-	.navbar-left .form .search-input.show{
-		width: 100%;
-		height: 30px;
-		padding: 0.5rem;
-		margin-right: 8px;
-	}
-	.navbar-left form{
-		display: flex;
-		
-		align-items: center;
-		
-		transition: 1s ease all ;
-		/*width: 100%;*/
-	}
 
-	.navbar-left form.show{
-		border: 1px solid #fff;
-		border-radius: 6px;
-		height: 30px;
-		background-color: transparent;
-		padding: 4px;
-	}
+	/*form search baru by-nizar*/
 
-
-	/*form search baru*/
-
-	.my-navbar form.baru{
-		display : block;
+	.my-navbar form.form-search{
+		display: block;
 		position: absolute;
 		width: 85%;
 		height: 40px;
@@ -250,16 +129,20 @@
 		top: -50px;
 		transition: top 500ms ease-out;
 	}
-
-	.my-navbar form.baru.show{
+	#tag-menu {
+		display:none;
+		float: right;
+	}
+	.my-navbar form.form-search.show{
 		top : 0;
 	}
-	.my-navbar form.baru .search-baru{
-		width: 100%;
+	.my-navbar form.form-search .input-search{
+		width: 90%;
 		height: 100%;
 		font-size: 12px;
 		padding: 4px;
 		border: none;
+		border-radius: 4px;
 		background-color: transparent;
 	}
 	.mybtn {
@@ -270,12 +153,7 @@
 		cursor: pointer;
 		background-color: #fff
 	}
-	.btn-search i{
-		color: grey;
-	}
-	.btn-search:hover {
-		background-color: #eee;
-	}
+	
 	.navbar-right{
 		display: none;
 	}
@@ -289,6 +167,7 @@
 		justify-content: space-around;
 		overflow-x: scroll;
 		align-items: center;
+		margin-top: 8px;
 	}
 	
 	.mynavbar-list {
@@ -332,5 +211,23 @@
 
 	::-webkit-scrollbar{
 		display: none;
+	}
+
+	/*responsive footer*/
+	.footer-body div.info{
+		width: 80%;
+		text-align: center;
+		margin:16px auto;
+		box-sizing: border-box;
+	}
+	.content .container .col.mb-4{
+		padding: 8px;
+	}
+	section#mahasiswa div.img-mahasiswa{
+		display: none;
+	}
+	section#mahasiswa div.col-sm-12{
+		padding: 16px auto;
+		box-sizing: border-box;
 	}
 }
