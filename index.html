@@ -19,26 +19,22 @@
 	</head>
 	<body>
 		<!-- navbar -->
-		<nav class="my-navbar fixed-top">
+		<nav class="my-navbar fixed-top" id="navbar">
 			<!-- form search bar baru -->
-			<form action="" class="baru">
-				<input type="text" placeholder="Search... " class="search-baru">
+			<form action="" class="form-search">
+				<input type="text" placeholder="Search... " class="input-search">
+				<button type="submit" class="btn-search"><i class="fa fa-search text-secondary"></i></button>
 			</form>
 			<div class="navbar-left">
 				<div class="logo">
 					<a href="#">KataDosen</a>
 				</div>
-				<!-- <input type="checkbox" id="tag-menu"/>
-				<label class="fa fa-bars menu-bar" for="tag-menu">&nbsp;&nbsp;Menu</label> -->
+				
 				<div class="burger">
 					<span></span>
 				</div>
 				
-				<form action="#" class="form">
-					<input type="search" class="search-input" placeholder="Search ..." autofocus />
-					<!-- <button class="mybtn btn-search"><i class="fa fa-search"></i></button> -->
-					<i class="fa fa-search text-white" id="muncul" ></i>
-				</form>
+				<i class="fa fa-search text-white" id="btn-toggle" ></i>
 			</div>
 			
 			<div class="mynavbar-content">
@@ -145,11 +141,11 @@
 					<span class="badge badge-secondary">#Sistem Informasi</span>
 					<span class="badge badge-danger">#Algoritma</span>
 					<br>
-					<p class="text-muted text-right">Diupload pada 21 oktober 2021</p>
+					<p class="text-muted text-right uploaded">Diupload pada 21 oktober 2021</p>
 					<hr>
 					<!-- Daite/Time -->
 					
-					<img id="img-penulis" src="assets/img/orang.png" width="40px" alt="" class="mr-2"><span>Nizar rizkiana</span>
+					<img id="img-penulis" src="assets/img/orang.png" width="40px" alt="" class="mr-2"><span class="nama-penulis">Nizar rizkiana</span>
 					<hr>
 					<figure class="figure">
 						<img id="content-img" class="img-fluid rounded text-center" src="assets/img/img_artikel.png" alt="">
@@ -174,7 +170,7 @@
 					<!-- penutup col-md-8 -->
 				</div>
 				<!-- sidebar -->
-				<div id="sidebar" class="col-md-4 border py-4 ml-4 roundedk">
+				<div id="sidebar" class="col-md-4 border py-4 ml-4">
 					<h5 class="my-4">Materi Kuliah Serupa</h5>
 					<hr>
 					<ul id="list" class="list-unstyled">
@@ -343,54 +339,12 @@
 				<p class="text-muted">Copyright &copy; Kata Dosen 2021</p>
 			</div>
 		</footer>
-		<script>
-			const dropdown_btns = document.querySelectorAll(".dropdown-btn");
-		const burger = document.querySelector(".burger");
-			// script my-nav
-		burger.addEventListener("click", () => {
-		const navbar_content = document.querySelector(".navbar-content");
-		burger.classList.toggle("active");
-		navbar_content.classList.toggle("show");
-		});
-		dropdown_btns.forEach((btn) => {
-		btn.addEventListener("click", (e) => {
-		const dropdown = e.currentTarget.nextElementSibling;
-		dropdown.classList.toggle("show");
-		document
-		.querySelectorAll(".dropdown-btn + .dropdown-list")
-		.forEach((dropdown) => {
-		if (dropdown !== e.currentTarget.nextElementSibling) {
-		dropdown.classList.remove("show");
-		}
-		});
-		});
-		});
-		window.onclick = (e) => {
-		if (!e.target.matches(".dropdown-btn")) {
-		const dropdowns = document.querySelectorAll(".dropdown-list");
-		dropdowns.forEach((drpodown) => {
-		drpodown.classList.remove("show");
-		});
-		}
-		};
-		// search-input muncul
-		var search = document.querySelector('.search-input');
-		var tombol = document.getElementById('muncul');
-		var form = document.querySelector('.baru');
-				
-		tombol.addEventListener('click', function(){
-		inputShow();
-		});
-		function inputShow(){
-		// search.classList.toggle('show');
-		form.classList.toggle('show');
-		}
-		</script>
 		<script src="bootstrap/js/jquery.js"></script>
 		<script src="bootstrap/js/popper.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
 		<script src="assets/script/flikity.min.js"></script>
 		<script src="assets/script/owl.carousel.js"></script>
+		<script type="text/javascript" src="assets/script/my-script.js"></script>
 		<script>
 		var owl = $('.owl-carousel');
 		owl.owlCarousel({
