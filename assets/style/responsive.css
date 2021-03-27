@@ -7,7 +7,7 @@
 		margin: 0;
 	}
 	p{
-		font-size: 14px;
+		font-size: 16px;
 		top: 0;
 	}
 	a{
@@ -64,6 +64,12 @@
 		font-size: 20px;
 		margin-top: 8px;
 	}
+
+	/*baru-- style responsive img artikel*/
+	#content #content-img{
+		height: 190px;
+	}
+
 
 	figure .figure-caption{
 		font-size: 12px;
@@ -230,4 +236,5 @@
 		padding: 16px auto;
 		box-sizing: border-box;
 	}
+
 }

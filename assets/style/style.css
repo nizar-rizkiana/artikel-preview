@@ -164,17 +164,17 @@ footer .copyright{
 	text-align: justify;
 }
 
-#content #content-image{
+#content #content-img{
 	height: 360px;
-	width: 640px;
-	
+	width: 630px;
+	border-radius: 16px;
 }
 
 /*artikel sidebar*/
 #sidebar ul li .miniside{
 	width: 130px;
 	height: 73px;
-	border-radius: 12px;
+	border-radius: 8px;
 	margin-right: 6px;
 }
 
@@ -188,3 +188,23 @@ section#mahasiswa{
 section#mahasiswa .col-md-6 {
 	padding: 0 24px 24px 24px;
 }
+
+/*div#share{
+	border: 1px solid red;
+	width: 60px;
+	text-align: center;
+	position: fixed;
+	left: 10px;
+	top:30%;
+}
+
+div#share .share-link{
+	list-style:none;
+	border: 1px solid blue;
+}
+div#share .share-link li{
+	padding: 8px;
+	border-bottom: 1px solid grey;
+	background-color: yellow;
+}
+*/
